@@ -333,65 +333,6 @@ textarea.input {
 .cart-header {
   z-index: 20;
   position: relative;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  -webkit-animation: show 0.8s ease 0s;
-          animation: show 0.8s ease 0s;
-}
-
-@-webkit-keyframes show {
-  0% {
-    -webkit-transform: translate(0px, 50%);
-            transform: translate(0px, 50%);
-  }
-
-  100% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-}
-
-@keyframes show {
-  0% {
-    -webkit-transform: translate(0px, 50%);
-            transform: translate(0px, 50%);
-  }
-
-  100% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-}
-
-._scroll .cart-header {
-  position: fixed;
-  -webkit-animation: move 1s ease 0s forwards;
-          animation: move 1s ease 0s forwards;
-}
-
-@-webkit-keyframes move {
-  0% {
-    top: 0%;
-    right: 13%;
-  }
-
-  100% {
-    top: 90%;
-    right: 2%;
-  }
-}
-
-@keyframes move {
-  0% {
-    top: 0%;
-    right: 13%;
-  }
-
-  100% {
-    top: 90%;
-    right: 2%;
-  }
 }
 
 .cart-header__icon {
@@ -1215,6 +1156,65 @@ textarea.input {
     margin: 0px 0px 0px -15px;
     padding: 0px 15px;
   }
+
+  .cart-header {
+    -webkit-animation: show 0.8s ease 0s;
+            animation: show 0.8s ease 0s;
+  }
+
+@-webkit-keyframes show {
+    0% {
+      -webkit-transform: translate(0px, 50%);
+              transform: translate(0px, 50%);
+    }
+
+    100% {
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+    }
+}
+
+@keyframes show {
+    0% {
+      -webkit-transform: translate(0px, 50%);
+              transform: translate(0px, 50%);
+    }
+
+    100% {
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+    }
+}
+
+  ._scroll .cart-header {
+    position: fixed;
+    -webkit-animation: move 1s ease 0s forwards;
+            animation: move 1s ease 0s forwards;
+  }
+
+@-webkit-keyframes move {
+    0% {
+      top: 0%;
+      right: 13%;
+    }
+
+    100% {
+      top: 90%;
+      right: 2%;
+    }
+}
+
+@keyframes move {
+    0% {
+      top: 0%;
+      right: 13%;
+    }
+
+    100% {
+      top: 90%;
+      right: 2%;
+    }
+}
 
   .menu__item:not(:last-child) {
     margin: 0px 0px 1.875em 0px;
