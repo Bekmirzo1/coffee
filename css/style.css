@@ -670,7 +670,7 @@ textarea.input {
 }
 
 .header__logo img {
-  background-color: #ece6e6;
+  background-color: #f2f2f2;
   padding: 3px;
   border-radius: 3px;
 }
@@ -710,6 +710,14 @@ textarea.input {
 
 .main-full {
   position: relative;
+}
+
+.main-full__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #151d28 url(../img/main.png) center/cover no-repeat;
+  z-index: -1;
 }
 
 .aside-full__header {
@@ -1237,17 +1245,15 @@ textarea.input {
     background-color: #415167;
   }
 
-  .main-full {
-    background-image: url(../img/main.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
   .main-full__title-cover {
     position: absolute;
     bottom: 64px;
     left: 3px;
+  }
+
+  .main-full__bg {
+    width: 75%;
+    height: 100%;
   }
 
   .aside-full__body {
@@ -1295,17 +1301,6 @@ textarea.input {
   }
 }
 
-@media (min-width: 767.98px) and (orientation: landscape) {
-  .header__logo img {
-    background-color: transparent;
-  }
-
-  .main-full {
-    background-position: right;
-    background-size: 75% 100%;
-  }
-}
-
 @media (min-width: 767.98px) and (max-height: 479.98px) and (orientation: landscape) {
   .fullscreen {
     height: 100%;
@@ -1313,6 +1308,12 @@ textarea.input {
 
   .fullscreen .fullscreen__aside {
     padding: 0px 0px 30px 0px;
+  }
+}
+
+@media (min-width: 767.98px) and (min-aspect-ratio: 2 / 3) and (max-aspect-ratio: 3 / 2) {
+  .main-full__bg {
+    width: 100%;
   }
 }
 
@@ -1588,7 +1589,7 @@ textarea.input {
   }
 
   .menu__item:not(:last-child) {
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 50px 0px;
   }
 
   .menu__link {
@@ -1692,10 +1693,6 @@ textarea.input {
             transform: rotate(45deg);
   }
 
-  .fullscreen {
-    background: url(../img/main.png) center/cover no-repeat;
-  }
-
   .fullscreen__main {
     margin: 0px 20px;
   }
@@ -1727,6 +1724,12 @@ textarea.input {
     padding-bottom: 30px;
   }
 
+  .main-full__bg {
+    left: 0;
+    bottom: 0;
+    margin: 0px -20px;
+  }
+
   .aside-full__header {
     display: none;
   }
@@ -1744,6 +1747,10 @@ textarea.input {
 
   .slider-coffees__arrows {
     display: none;
+  }
+
+  .gift__container {
+    padding: 0px 0px;
   }
 
   .block-tabs-gift__recipe:nth-child(even) {
@@ -1881,12 +1888,4 @@ textarea.input {
   }
 }
 
-@media (min-width: 767.98px) {
-
-  .webp .main-full { background-image: url(../img/main.webp); }
-}
-
-@media (max-width: 767.98px) {
-
-  .webp .fullscreen { background: url(../img/main.webp) center/cover no-repeat; }
-}
+.webp .main-full__bg { background: #151d28 url(../img/main.webp) center/cover no-repeat; }

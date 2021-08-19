@@ -33,8 +33,10 @@ if (document.querySelector('.slider-coffees__body')) {
     new Swiper('.slider-coffees__body', {
         observer: true,
         observeParents: true,
+        observeSlideChildren: true,
         speed: 800,
         spaceBetween: 20,
+        watchOverflow: true,
         // Arrows
         navigation: {
             nextEl: '.slider-coffees .slider-arrow_next',
@@ -61,6 +63,7 @@ if (document.querySelector('.slider-combo__body')) {
     new Swiper('.slider-combo__body', {
         observer: true,
         observeParents: true,
+        observeSlideChildren: true,
         speed: 800,
         watchOverflow: true,
         // Arrows
